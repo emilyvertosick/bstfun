@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • bstfun</title>
+<title>Set custom gtsummary themes — theme_gtsummary_msk • bstfun</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Set custom gtsummary themes — theme_gtsummary_msk" />
+<meta property="og:description" content="This is a place for any member of the MSK community to add a personal gtsummary theme.
+Reach out if you're interested in adding yours!" />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -107,41 +109,42 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/ddsjoberg/bstfun/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Set custom gtsummary themes</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ddsjoberg/bstfun/blob/master/R/theme_gtsummary_msk.R'><code>R/theme_gtsummary_msk.R</code></a></small>
+    <div class="hidden name"><code>theme_gtsummary_msk.Rd</code></div>
     </div>
 
-    <div id="bstfun-012" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.2">
-<a href="#bstfun-012" class="anchor"></a>bstfun 0.1.2</h1>
-<ul>
-<li><p>Added new function <code><a href="../reference/gts_add_p_footnotes.html">gts_add_p_footnotes()</a></code></p></li>
-<li><p>Added new themes to <code><a href="../reference/theme_gtsummary_msk.html">theme_gtsummary_msk()</a></code></p></li>
-</ul>
-</div>
-    <div id="bstfun-011" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.1">
-<a href="#bstfun-011" class="anchor"></a>bstfun 0.1.1</h1>
-<ul>
-<li><p>Added the <code><a href="../reference/theme_gtsummary_msk.html">theme_gtsummary_msk()</a></code> function. This is a place for any member of the MSK community to add their person gtsummary theme.</p></li>
-<li><p>Added the <code><a href="../reference/here_data.html">here_data()</a></code> function. Similar to <code><a href="https://rdrr.io/pkg/here/man/here.html">here::here()</a></code> which returns your project directory, <code><a href="../reference/here_data.html">here_data()</a></code> returns the path to your current data folder based on the date in <code>data_date.txt</code>.</p></li>
-</ul>
-</div>
-    <div id="bstfun-010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#bstfun-010" class="anchor"></a>bstfun 0.1.0</h1>
-<ul>
-<li>First release</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>This is a place for any member of the MSK community to add a personal gtsummary theme.
+Reach out if you're interested in adding yours!</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>theme_gtsummary_msk</span><span class='op'>(</span>
+  name <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"hot"</span>, <span class='st'>"karissa"</span>, <span class='st'>"ally"</span>, <span class='st'>"mauguen"</span>, <span class='st'>"esther"</span>, <span class='st'>"curry"</span>, <span class='st'>"lavery"</span>, <span class='st'>"meier"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>name</th>
+      <td><p>string indicating the custom theme to set.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Visit the <a href='http://www.danieldsjoberg.com/gtsummary/articles/themes.html#writing-themes-1'>gtsummary themes vignette</a> for a full list of preferences that can be set.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>theme_gtsummary_msk</span><span class='op'>(</span><span class='st'>"hot"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Setting `H.O.T.` theme</span></div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

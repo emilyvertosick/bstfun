@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • bstfun</title>
+<title>Find your data folder — here_data • bstfun</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Find your data folder — here_data" />
+<meta property="og:description" content="Similar to here::here() which returns your project directory, here_data()
+returns the path to your current data folder based on the date in data_date.txt" />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -107,41 +109,56 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/ddsjoberg/bstfun/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Find your data folder</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ddsjoberg/bstfun/blob/master/R/here_data.R'><code>R/here_data.R</code></a></small>
+    <div class="hidden name"><code>here_data.Rd</code></div>
     </div>
 
-    <div id="bstfun-012" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.2">
-<a href="#bstfun-012" class="anchor"></a>bstfun 0.1.2</h1>
-<ul>
-<li><p>Added new function <code><a href="../reference/gts_add_p_footnotes.html">gts_add_p_footnotes()</a></code></p></li>
-<li><p>Added new themes to <code><a href="../reference/theme_gtsummary_msk.html">theme_gtsummary_msk()</a></code></p></li>
-</ul>
-</div>
-    <div id="bstfun-011" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.1">
-<a href="#bstfun-011" class="anchor"></a>bstfun 0.1.1</h1>
-<ul>
-<li><p>Added the <code><a href="../reference/theme_gtsummary_msk.html">theme_gtsummary_msk()</a></code> function. This is a place for any member of the MSK community to add their person gtsummary theme.</p></li>
-<li><p>Added the <code><a href="../reference/here_data.html">here_data()</a></code> function. Similar to <code><a href="https://rdrr.io/pkg/here/man/here.html">here::here()</a></code> which returns your project directory, <code><a href="../reference/here_data.html">here_data()</a></code> returns the path to your current data folder based on the date in <code>data_date.txt</code>.</p></li>
-</ul>
-</div>
-    <div id="bstfun-010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#bstfun-010" class="anchor"></a>bstfun 0.1.0</h1>
-<ul>
-<li>First release</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Similar to <code><a href='https://rdrr.io/pkg/here/man/here.html'>here::here()</a></code> which returns your project directory, <code>here_data()</code>
+returns the path to your current data folder based on the date in <code>data_date.txt</code></p>
+    </div>
 
+    <pre class="usage"><span class='fu'>here_data</span><span class='op'>(</span><span class='va'>...</span>, data_folder_name <span class='op'>=</span> <span class='st'>"secure_data"</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>...</th>
+      <td><p><code>[character]</code><br />
+Path components below the project root, can be empty.</p></td>
+    </tr>
+    <tr>
+      <th>data_folder_name</th>
+      <td><p>name of data folder. Default is <code>"secure_data"</code></p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>path to data folder</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The function expects the user to version their data using a text file indicating
+the date the data was last received, and the data to be stored in a corresponding
+folder name, e.g. <code>~\Project Folder\secure_data\2020-01-01</code>.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>here_data</span><span class='op'>(</span><span class='op'>)</span>
+<span class='co'>#&gt; "C:\Users\SjobergD\GitHub\My Project\secure_data\2020-01-01"</span>
+
+<span class='fu'>here_data</span><span class='op'>(</span><span class='st'>"Raw Data.xlsx"</span><span class='op'>)</span>
+<span class='co'>#&gt; "C:\Users\SjobergD\GitHub\My Project\secure_data\2020-01-01\Raw Data.xlsx"</span>
+<span class='op'>}</span>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
